@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+Aletheia
+Self-Regulating Multi-Agent Research System
 
-## Project info
+Aletheia is a consensus-driven, multi-agent research architecture designed to reduce hallucination, bias, and token inefficiency in LLM-based systems.
+Instead of relying on a single reasoning chain, Aletheia orchestrates specialized agents that debate, critique, recalibrate trust, and iteratively refine outputs before producing a final research document.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The Problem:
+Traditional single-agent LLM workflows:
+  -Produce unverified claims
+  -Fail to self-correct
+  -Waste tokens through redundant context
+  -Lack structured consensus validation
+Aletheia introduces governance and dynamic weighting into the reasoning loop.
 
-## How can I edit this code?
+Architecture:
+Agents-
+Agent            	Function
+Researcher      	Generates structured findings with confidence scores
+Critic          	Identifies logical gaps, bias, and inconsistencies
+Synthesizer	      Produces weighted consensus from validated outputs
+Writer	          Generates structured, publication-ready report
 
-There are several ways of editing your application.
+Orchestration Logic:
+  -Message queue–based coordination
+  -Iterative refinement loop (max 5 cycles)
+  -Consensus threshold ≥ 0.75 required for report generation
+  -Trust-weighted voting mechanism
 
-**Use Lovable**
+Core Innovation:
+1. Trust & Bias Evolution Engine
+   Each agent begins with equal trust.
+   Trust scores evolve based on:
+      -Critic feedback
+      -Historical performance
+      -Logical consistency
+   Agent influence dynamically adjusts during synthesis.
+   This transforms the system into a self-regulating research ecosystem, rather than a static prompt pipeline.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+2. Context Efficiency- ScaleDown Compression Layer
+To prevent context explosion in multi-agent systems:
+    -Inter-agent exchanges are compressed into semantic kernels
+    -Token transfer reduced by ~70%
+    -Enables extended debates across larger research scopes
 
-Changes made via Lovable will be committed automatically to this repo.
+System Flow
+User Input
+   ↓
+Researcher
+   ↓
+Critic
+   ↓
+Trust Recalibration
+   ↓
+Synthesizer
+   ↓
+Consensus ≥ 0.75 ?
+   ├── No → Iteration Loop
+   └── Yes → Writer → Final Report
 
-**Use your preferred IDE**
+Dashboard Capabilities:
+    -Real-time Agent Activity Feed
+    -Trust Evolution Matrix
+    -Token Efficiency Metrics
+    -Multi-agent vs Single-agent Benchmark
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Performance Targets:
+    ~70% reduction in inter-agent token transfer
+    3–4x deeper research coverage
+    Structured source attribution
+    Iterative bias mitigation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Installation
+git clone https://github.com/JenniferGraceJoseph/Aletheia-multi-agent-research-team.git
+cd Aletheia-multi-agent-research-team
+pip install -r requirements.txt
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Author
+-Jennifer Grace Joseph
