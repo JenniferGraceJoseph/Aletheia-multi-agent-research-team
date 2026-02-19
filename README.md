@@ -75,5 +75,8 @@ cd Aletheia-multi-agent-research-team
 pip install -r requirements.txt
 npm install
 
+## Full Documentation
+Detailed technical documentation available in the /docs directory.
+
 Author
 -Jennifer Grace Joseph
